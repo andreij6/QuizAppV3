@@ -1,0 +1,23 @@
+﻿.hidden {
+    display: none;
+}
+
+.qandA {
+    background-color: #666666;
+    padding: 20px;
+}
+
+.hover {
+    text-align: center;
+    background-color: #f5eeee;
+}
+
+.stuGquestion{
+    font-size: 25px;
+    color: #1a1313;
+}
+
+.stuGanswer {
+    font-size: 24px;
+    color: #666666;
+}

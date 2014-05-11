@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="container">
+        <button type="button" class="btn btn-primary" onclick="_QApp.goHome()">Home</button><hr/>
+        <section id="Home">
+            <input type="text" id="courseName" placeholder="Course Name" />
+            <button type="button" onclick="_QApp.CreateCourse()">Create Course</button>
+            <button type="button" id="UpdateCourse">Update Course</button>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Course Name
+                        </th>
+                        <th>
+                            StudyGuides
+                        </th>
+                        <th>
+                            Study
+                        </th>
+                        <th>
+                            Add Study Guide
+                        </th>
+                        <th>
+                            Edit Course
+                        </th>
+                        <th>
+                            Delete Course
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </section>
+
+        <section id="StudyGuideSelection" class="hidden">
+            <h1 id="SGtitle"></h1>
+
+            <ul id="guidesList">
+
+            </ul>
+            
+        </section>
+
+        <section id="AddQuestions" class="hidden">
+            <h1 id="Qtitle"></h1>
+            <article id="QuestionInput">
+                
+                <div class="qandA">
+                    <textarea class="form-control" rows="4" id="Q1"placeholder="Question"></textarea><hr/>
+                    <textarea class="form-control" rows="4" id="A1" placeholder="Answer"></textarea><br/>
+                    <div class="col-md-8  col-md-push-4 hover" onmouseover="_QApp.AddQ()">Hover to Add a new Question</div>
+                </div>
+                 
+            </article>
+            <button type="button" id="MakeStuG"class="btn btn-primary btn-lg">Make StudyGuide</button>
+        </section>
+
+        <section id="StudyGuide" class="hidden">
+            <h1>Study Guide</h1>
+            <div id="StudyArea">
+
+            </div>
+        </section>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <label for="studyGuideName">Study Guide Name</label>
+                        <input type="text" id="studyGuideName" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="AddSGButton">Add Study Guide</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="Scripts/jquery-1.9.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="_QuizApp.js"></script>
+</body>
+</html>
